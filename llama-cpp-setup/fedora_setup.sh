@@ -5,6 +5,7 @@ sudo dnf group install development-tools \
     c-development \
     system-tools
 sudo dnf install \
+    cmake \
     vulkan-loader-devel \
     tmux \
     vim \
@@ -35,15 +36,14 @@ curl -fsSL https://pyenv.run | bash
 # Add pyenv to future interactive shells                                                                                                                             
 if ! grep -q 'export PYENV_ROOT="$HOME/.pyenv"' "$HOME/.bashrc"; then                                                                                                
     cat >> "$HOME/.bashrc" <<'EOF'
-                                                                                                                                                                                                                                                                                                       
-# pyenv                                                                                                                                                              
-export PYENV_ROOT="$HOME/.pyenv"                                                                                                                                     
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"                                                                                                      
 eval "$(pyenv init - bash)"                                                                                                                                          
 eval "$(pyenv virtualenv-init -)"                                                                                                                                    
-EOF                                                                                                                                                                  
-fi                                                                                                                                                                   
-                                                                                                                                                                    
+EOF
+fi
+
 # Load pyenv into this script right now                                                                                                                              
 export PYENV_ROOT="$HOME/.pyenv"                                                                                                                                     
 export PATH="$PYENV_ROOT/bin:$PATH"                                                                                                                                  
