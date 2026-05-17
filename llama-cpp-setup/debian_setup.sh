@@ -34,24 +34,22 @@ git lfs install
 
 curl -fsSL https://pyenv.run | bash
 
-# Add pyenv to future interactive shells                                                                                                                             
-if ! grep -q 'export PYENV_ROOT="$HOME/.pyenv"' "$HOME/.bashrc"; then                                                                                                
+# Add pyenv to future interactive shells
+if ! grep -q 'export PYENV_ROOT="$HOME/.pyenv"' "$HOME/.bashrc"; then
     cat >> "$HOME/.bashrc" <<'EOF'
-                                                                                                                                                                                                                                                                                                       
-# pyenv                                                                                                                                                              
-export PYENV_ROOT="$HOME/.pyenv"                                                                                                                                     
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"                                                                                                      
-eval "$(pyenv init - bash)"                                                                                                                                          
-eval "$(pyenv virtualenv-init -)"                                                                                                                                    
-EOF                                                                                                                                                                  
-fi                                                                                                                                                                   
-                                                                                                                                                                    
-# Load pyenv into this script right now                                                                                                                              
-export PYENV_ROOT="$HOME/.pyenv"                                                                                                                                     
-export PATH="$PYENV_ROOT/bin:$PATH"                                                                                                                                  
-eval "$("$PYENV_ROOT/bin/pyenv" init - bash)"                                                                                                                        
-eval "$("$PYENV_ROOT/bin/pyenv" virtualenv-init -)"
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"
+eval "$(pyenv virtualenv-init -)"
+EOF
+fi
 
+# Load pyenv into this script right now
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$("$PYENV_ROOT/bin/pyenv" init - bash)"
+eval "$("$PYENV_ROOT/bin/pyenv" virtualenv-init -)"
 
 pyenv install $PYTHON_VERSION && pyenv global $PYTHON_VERSION
 
