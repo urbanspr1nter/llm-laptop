@@ -27,6 +27,7 @@ sudo apt install build-essential \
 	libcurl4-openssl-dev \
 	tmux \
 	vim \
+    nvtop \
 	zlib1g-dev -y
 
 git lfs install

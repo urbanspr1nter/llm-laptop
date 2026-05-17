@@ -23,6 +23,7 @@ sudo dnf install \
     sqlite3 \
     sqlite-devel \
     lzma \
+    nvtop \
     git \
     git-lfs
 
