@@ -1,6 +1,6 @@
 #!/bin/bash
 
-suco dnf check-update
+sudo dnf check-update
 sudo dnf update
 sudo dnf group install development-tools \
     c-development \
