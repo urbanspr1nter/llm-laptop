@@ -3,6 +3,8 @@
 cd "$HOME/code/repos/llama.cpp"
 git pull
 
+rm -rf "$HOME/code/repos/llama.cpp/build"
+
 cmake -B build -DBUILD_SHARED_LIBS=OFF \
     -DCMAKE_INSTALL_PREFIX=$HOME/bin/llama.cpp \
     -DLLAMA_BUILD_TESTS=OFF \
