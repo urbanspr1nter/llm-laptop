@@ -68,9 +68,16 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$VULKAN_SDK/lib
 export VK_LAYER_PATH=$VULKAN_SDK/share/vulkan/explicit_layer.d
 export VK_ADD_LAYER_PATH=$VULKAN_SDK/share/vulkan/explicit_layer.d
 export PKG_CONFIG_PATH=$VULKAN_SDK/lib/pkgconfig
-
 EOF
 fi
+
+# Set the variables for this session:
+export VULKAN_SDK=$HOME/vulkan-sdk/1.4.350.0/x86_64
+export PATH=$PATH:$VULKAN_SDK/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$VULKAN_SDK/lib
+export VK_LAYER_PATH=$VULKAN_SDK/share/vulkan/explicit_layer.d
+export VK_ADD_LAYER_PATH=$VULKAN_SDK/share/vulkan/explicit_layer.d
+export PKG_CONFIG_PATH=$VULKAN_SDK/lib/pkgconfig
 
 
 mkdir -p $HOME/code/repos
