@@ -30,6 +30,8 @@ sudo apt install build-essential \
     nvtop \
 	zlib1g-dev -y
 
+sudo apt-get install libvulkan-dev glslc spirv-headers -y
+
 git lfs install
 
 curl -fsSL https://pyenv.run | bash
